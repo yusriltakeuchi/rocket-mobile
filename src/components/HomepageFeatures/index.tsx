@@ -11,32 +11,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Panduan Praktis',
+    Svg: require('@site/static/img/undraw_simple.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Langkah-langkah jelas untuk publish ke App Store & Play Store tanpa ribet.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Tips Penting & Efisien',
+    Svg: require('@site/static/img/undraw_tips.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Fokus pada hal-hal yang benar-benar penting agar proses rilis jadi lebih cepat dan minim error.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Selalu Update',
+    Svg: require('@site/static/img/undraw_uptodate.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Dibuat dengan teknologi modern dan terus diperbarui mengikuti standar terbaru dari Apple & Google.
       </>
     ),
   },
