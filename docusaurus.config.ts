@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Rocket Mobile',
+  tagline: 'Dokumentasi Publishing Mobile Apps',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -40,7 +40,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/yusriltakeuchi/rocket-mobile/tree/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -55,7 +55,7 @@ const config: Config = {
     navbar: {
       title: 'Rocket Mobile',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Rocket Mobile Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -66,7 +66,7 @@ const config: Config = {
           label: 'Dokumentasi',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/yusriltakeuchi/rocket-mobile',
           label: 'GitHub',
           position: 'right',
         },
@@ -110,7 +110,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/yusriltakeuchi/rocket-mobile',
             },
           ],
         },
