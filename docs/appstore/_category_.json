@@ -1,0 +1,8 @@
+{
+  "label": "App Store",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Informasi tentang pubblishing ke App Store."
+  }
+}
