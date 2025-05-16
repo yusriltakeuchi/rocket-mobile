@@ -1,8 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 6
 ---
 
-# OAuth
+# OAuth Login
 
 Memahami tentang fitur OAuth pada iOS
 

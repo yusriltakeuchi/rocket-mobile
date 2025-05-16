@@ -1,5 +1,5 @@
 ---
-sidebar_position: 12
+sidebar_position: 4
 ---
 
 # White Label
@@ -38,4 +38,4 @@ Dengan menggunakan flavor kita bisa membuat banyak varian dari satu project. Mis
 
 ### Menggunakan satu project dengan config dinamis
 
-Dengan menggunakan config dinamis kita bisa membuat satu project dengan satu flavor tetapi kita bisa mengubah warna, logo, dan icon sesuai dengan client yang kita inginkan. Misalnya kita punya 3 client, kita bisa membuat 3 file config dengan nama **client1.json**, **client2.json**, dan **client3.json**. Dengan ini kita bisa mengubah warna, logo, dan icon sesuai dengan client yang kita inginkan. Di sini biasanya kita perlu membuat script sendiri karena pasti akan berbeda-beda.
+Dengan menggunakan config dinamis kita bisa membuat satu project dengan satu flavor tetapi kita bisa mengubah warna, logo, dan icon sesuai dengan client yang kita inginkan berdasarkan config. Misalnya kita punya 3 client, kita bisa membuat 3 file config dengan nama **client1.json**, **client2.json**, dan **client3.json**. Pada tahap ini biasanya kita perlu membuat script sendiri karena pasti akan berbeda-beda kebutuhannya
