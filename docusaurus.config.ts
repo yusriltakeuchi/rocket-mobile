@@ -66,6 +66,11 @@ const config: Config = {
           label: 'Dokumentasi',
         },
         {
+          href: 'https://saweria.co/yurapsanjani',
+          position: 'left',
+          label: 'Donasi',
+        },
+        {
           href: 'https://github.com/yusriltakeuchi/rocket-mobile',
           label: 'GitHub',
           position: 'right',
