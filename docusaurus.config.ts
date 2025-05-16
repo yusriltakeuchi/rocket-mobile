@@ -103,7 +103,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Rocket Mobile. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Rocket Mobile`,
     },
     prism: {
       theme: prismThemes.github,

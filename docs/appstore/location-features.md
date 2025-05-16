@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 11
 ---
 
 # Location Features
@@ -10,7 +10,7 @@ Memahami tentang masalah lokasi pada aplikasi iOS
 
 Fitur ini biasanya dipakai jika aplikasi memerlukan lokasi pengguna melalui GPS untuk kebutuhan tertentu. Misalnya aplikasi ingin mencari data lokasi terdekat, atau mendata lokasi pengguna saat melakukan aksi sehingga terekam di database dimana orang tersebut melakukannya. Tetapi ada sedikit masalah jika kita tidak memperhatikan fitur ini saat dikirim ke Apple.
 
-## Permasalahan
+## Masalah
 
 Biasanya Tim Reviewer Apple **jarang** memberikan akses lokasi kepada aplikasi kita. Karena mereka menjaga privasi lokasi kantor tempat mereka bekerja atau mungkin juga memang SOP perusahaan untuk tidak memberikan akses lokasi.
 Jadi aplikasi kita akan ditolak jika saat pengguna menolak memberikan akses lokasi dan aplikasi kita tidak berjalan.
