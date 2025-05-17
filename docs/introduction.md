@@ -4,13 +4,13 @@ sidebar_position: 1
 
 # Introduction
 
-Rocket Mobile adalah sebuah situs dokumentasi yang menyediakan tips dan informasi penting seputar proses publishing aplikasi mobile ke App Store. Situs ini hadir untuk membantu developer memahami berbagai aturan dan standar yang berlaku agar aplikasi yang dibuat dapat lolos review dengan lebih mudah.
+Rocketmob adalah sebuah situs dokumentasi yang menyediakan tips dan informasi penting seputar proses publishing aplikasi mobile ke App Store. Situs ini hadir untuk membantu developer memahami berbagai aturan dan standar yang berlaku agar aplikasi yang dibuat dapat lolos review dengan lebih mudah.
 
-## Kenapa Rocket Mobile Dibuat?
+## Kenapa Rocketmob Dibuat?
 
-Proses pengajuan aplikasi ke App Store sering kali mengalami kendala akibat ketidaktahuan developer terhadap aturan Apple yang ketat. Mulai dari desain UI, sistem transaksi, hingga fitur privasi, semua harus memenuhi standar yang ditetapkan agar aplikasi diterima. Rocket Mobile dibuat sebagai panduan praktis yang membagikan berbagai trik dan informasi tambahan untuk mengatasi masalah umum dan meningkatkan peluang aplikasi Anda lolos review.
+Proses pengajuan aplikasi ke App Store sering kali mengalami kendala akibat ketidaktahuan developer terhadap aturan Apple yang ketat. Mulai dari desain UI, sistem transaksi, hingga fitur privasi, semua harus memenuhi standar yang ditetapkan agar aplikasi diterima. Rocketmob dibuat sebagai panduan praktis yang membagikan berbagai trik dan informasi tambahan untuk mengatasi masalah umum dan meningkatkan peluang aplikasi Anda lolos review.
 
-## Manfaat Rocket Mobile
+## Manfaat Rocketmob
 
 - Memberikan panduan lengkap dan ringkas terkait fitur-fitur penting di aplikasi iOS.
 - Membantu developer menghindari penolakan dari Apple dengan mengikuti kebijakan yang berlaku.
@@ -18,7 +18,7 @@ Proses pengajuan aplikasi ke App Store sering kali mengalami kendala akibat keti
 - Menjelaskan secara detail aturan Apple terkait fitur seperti In-App Purchase, OAuth Login, Location, hingga App Tracking Transparency.
 - Meningkatkan kualitas aplikasi dengan fokus pada pengalaman pengguna dan kepatuhan terhadap standar Apple.
 
-## Apa yang Anda Temukan di Rocket Mobile?
+## Apa yang Anda Temukan di Rocketmob?
 
 Dalam situs ini, Anda akan menemukan berbagai artikel dan panduan yang membahas hal-hal seperti:
 

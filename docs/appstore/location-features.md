@@ -38,3 +38,20 @@ Akibatnya, aplikasi Anda berpotensi ditolak jika:
    - Jika GPS tidak diizinkan, kirimkan nilai latitude dan longitude sebagai `0`.  
    - Backend harus tetap menerima data tersebut tanpa error.  
    - Tambahkan parameter khusus pada payload (misal `platform: iOS`) untuk menandai kasus khusus ini.
+
+### Dianjurkan ✅
+
+✅ Kirim permintaan akses lokasi **hanya ketika dibutuhkan**, bukan saat aplikasi pertama kali dibuka.  
+✅ Tampilkan penjelasan (rationale) sebelum meminta izin lokasi agar pengguna memahami manfaatnya.  
+✅ Sediakan **fallback** dan **pengalaman pengguna yang tidak bergantung total pada lokasi**.  
+✅ Tangani penolakan izin dengan baik agar aplikasi tidak crash.  
+✅ Uji aplikasi dengan skenario **tanpa izin lokasi** untuk memastikan stabilitas.  
+✅ Gunakan flag seperti `isLocationEnabled: false` atau `lat: 0, long: 0` untuk mendukung pengujian internal dan pengiriman ke App Store.
+
+### Tidak Dianjurkan ❌
+
+❌ Meminta akses lokasi saat aplikasi pertama kali dibuka tanpa konteks.  
+❌ Membuat aplikasi **tidak bisa digunakan sama sekali** jika izin lokasi ditolak.  
+❌ Mengirim error atau gagal login hanya karena data lokasi tidak tersedia.  
+❌ Menampilkan pesan error teknis tanpa memberikan solusi kepada pengguna.  
+❌ Mengandalkan data lokasi sebagai satu-satunya logika utama tanpa fallback.  

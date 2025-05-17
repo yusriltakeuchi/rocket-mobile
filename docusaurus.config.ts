@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Rocket Mobile',
+  title: 'Rocketmob',
   tagline: 'Dokumentasi Publishing Mobile Apps',
   favicon: 'img/favicon.ico',
 
@@ -27,8 +27,8 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'id',
+    locales: ['id'],
   },
 
   presets: [
@@ -53,9 +53,9 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/header_cover.png',
     navbar: {
-      title: 'Rocket Mobile',
+      title: 'Rocketmob',
       logo: {
-        alt: 'Rocket Mobile Logo',
+        alt: 'Rocketmob Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -93,7 +93,7 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'LinekdIn',
+              label: 'LinkedIn',
               href: 'https://www.linkedin.com/in/yusril-rapsanjani/',
             },
           ],
@@ -108,7 +108,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Rocket Mobile`,
+      copyright: `Copyright © ${new Date().getFullYear()} Rocketmob`,
     },
     prism: {
       theme: prismThemes.github,

@@ -1,4 +1,4 @@
-# Rocket Mobile
+# Rocketmob
 
 This website is a documentation site for Mobile Apps Publishing.
 

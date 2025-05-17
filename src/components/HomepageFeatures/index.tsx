@@ -12,7 +12,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Panduan Praktis',
-    Svg: require('@site/static/img/undraw_simple.svg').default,
+    Svg: require('@site/static/img/features.svg').default,
     description: (
       <>
         Langkah-langkah jelas untuk publish ke App Store & Play Store tanpa ribet.
@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Tips Penting & Efisien',
-    Svg: require('@site/static/img/undraw_tips.svg').default,
+    Svg: require('@site/static/img/features2.svg').default,
     description: (
       <>
         Fokus pada hal-hal yang benar-benar penting agar proses rilis jadi lebih cepat dan minim error.
@@ -30,7 +30,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Selalu Update',
-    Svg: require('@site/static/img/undraw_uptodate.svg').default,
+    Svg: require('@site/static/img/features3.svg').default,
     description: (
       <>
         Dibuat dengan teknologi modern dan terus diperbarui mengikuti standar terbaru dari Apple & Google.
