@@ -85,7 +85,7 @@ const config: Config = {
           items: [
             {
               label: 'Dokumentasi',
-              to: 'docs/category/general',
+              to: 'docs/introduction',
             },
           ],
         },
