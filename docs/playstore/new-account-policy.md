@@ -4,16 +4,22 @@ sidebar_position: 3
 
 # New Account Policy
 
-Memahami tentang kebijakan baru akun pada Play Store.
+Memahami kebijakan baru akun di Play Store
 
 ## Closed Testing
 
-Peraturan baru saat ini mewajibkan akun Playstore yang baru dibuat untuk melakukan Closed Testing sebelum akun tersebut bisa melakukan publish ke Productions. Kebijakan ini cukup menyusahkan banyak pihak terutama yang menerima order project dari client. Beberapa kriteria persyaratannya:
+Kebijakan terbaru mewajibkan akun Play Store Developer baru untuk melakukan **Closed Testing** sebelum bisa menerbitkan aplikasi ke Production. Hal ini cukup merepotkan terutama bagi pengembang yang mengerjakan project dari client.
 
-1. Testing ke **20 orang penguji**, akun yang jadi penguji bukanlah akun fiktif, setidaknya sudah melakukan review selama 14 hari terakhir.
+Beberapa persyaratan Closed Testing:  
+1. Melibatkan minimal **20 orang penguji** yang bukan akun fiktif. Penguji tersebut harus aktif memberikan review setidaknya dalam 14 hari terakhir.
 
-Tapi perlu digaris bawahi aturan ini hanya berlaku jika akun Playstore Developer Anda adalah Individual, jika perusahaan Anda tidak perlu melakukan ini.
+Catatan penting:  
+Aturan ini hanya berlaku untuk akun **Individual**. Jika akun Anda adalah milik perusahaan (Organization), aturan ini tidak berlaku.
 
 ## Maksimum SDK
 
-Jika Anda ingin mengirim build app baru ke PlayStore, aplikasi Anda harus set **targetSDKVersion** ke **35**. Nilai ini bisa berubah seiring berjalannya waktu. Ditambah jika muncul Android versi baru tidak memungkinan suatu saat nanti angkanya akan naik lagi.
+Untuk mengirim build aplikasi baru ke Play Store, Anda harus menetapkan **targetSDKVersion** minimal ke **35**. Angka ini dapat berubah seiring waktu, terutama saat muncul versi Android baru yang akan menaikkan persyaratan SDK.
+
+---
+
+Pastikan selalu mengikuti kebijakan terbaru agar aplikasi Anda bisa diterbitkan tanpa hambatan.

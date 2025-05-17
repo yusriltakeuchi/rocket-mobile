@@ -4,10 +4,10 @@ sidebar_position: 7
 
 # App Tracking Transparency
 
-Memahami tentang App Tracking Transparency pada iOS
+Memahami tentang App Tracking Transparency (ATT) pada iOS.
 
 ## Tracking Purpose
 
-Pada saat mengatur aplikasi pada Appstore Connect, mungkin kita secara sadar memberi tahu bahwa aplikasi kita ada indikasi tracking yang mungkin dipakai untuk Analytics. Hal ini bisa mengacu pada akun yang login maupun tidak. Apple sudah sering memberitahu jika aplikasi kita ada trackingnya kita harus menambahkan popup terkait App Tracking Transparency.
+Saat mengatur aplikasi di App Store Connect, Anda perlu menyatakan apakah aplikasi melakukan tracking, misalnya untuk keperluan analytics atau pengumpulan data pengguna—baik yang login maupun tidak. Apple mewajibkan developer untuk menampilkan **App Tracking Transparency** popup kepada pengguna.
 
-Ini semacam popup yang muncul saat aplikasi pertama kali dibuka yang memberi tahu kalau aplikasi melakukan tracking, dan sebagai pengguna kita bisa memilih **Ya** atau **Tidak**.
+Popup ini muncul saat aplikasi dibuka pertama kali dan memberi tahu pengguna bahwa aplikasi akan melakukan tracking. Pengguna kemudian dapat memilih untuk **Mengizinkan (Yes)** atau **Menolak (No)** pelacakan tersebut.

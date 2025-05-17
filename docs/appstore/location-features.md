@@ -4,22 +4,37 @@ sidebar_position: 10
 
 # Location Features
 
-Memahami tentang masalah lokasi pada aplikasi iOS
+Memahami tentang fitur lokasi pada aplikasi iOS dan tantangan yang mungkin dihadapi.
 
 ## Tentang Location Features
 
-Fitur ini biasanya dipakai jika aplikasi memerlukan lokasi pengguna melalui GPS untuk kebutuhan tertentu. Misalnya aplikasi ingin mencari data lokasi terdekat, atau mendata lokasi pengguna saat melakukan aksi sehingga terekam di database dimana orang tersebut melakukannya. Tetapi ada sedikit masalah jika kita tidak memperhatikan fitur ini saat dikirim ke Apple.
+Fitur lokasi biasanya digunakan saat aplikasi memerlukan data lokasi pengguna melalui GPS, misalnya untuk:
+
+- Mencari data lokasi terdekat  
+- Mencatat lokasi pengguna saat melakukan suatu aksi dan menyimpannya di database  
+
+Namun, ada beberapa kendala yang perlu diperhatikan terutama saat aplikasi dikirim ke Apple.
 
 ## Masalah
 
-Biasanya Tim Reviewer Apple **jarang** memberikan akses lokasi kepada aplikasi kita. Karena mereka menjaga privasi lokasi kantor tempat mereka bekerja atau mungkin juga memang SOP perusahaan untuk tidak memberikan akses lokasi.
-Jadi aplikasi kita akan ditolak jika saat pengguna menolak memberikan akses lokasi dan aplikasi kita tidak berjalan.
+Tim Reviewer Apple **jarang** memberikan akses lokasi kepada aplikasi saat pengujian, karena alasan privasi lokasi kantor mereka atau kebijakan internal perusahaan (SOP) yang ketat terhadap akses lokasi.
+
+Akibatnya, aplikasi Anda berpotensi ditolak jika:
+
+- Akses lokasi ditolak oleh pengguna  
+- Aplikasi tidak bisa berjalan atau crash tanpa akses lokasi  
 
 ## Solusi
 
-Buatlah sebuah **fallback** jika lokasi tidak diberikan. Misalnya dengan menampilkan popup yang menjelaskan bahwa aplikasi ini memerlukan akses lokasi untuk bisa berjalan dengan baik, tapi ada opsi pilihan untuk tidak memberikan akses lokasi. Jika memang masih tidak mau memberikan akses lokasi, kita bisa memberikan data acak atau general terkait fitur yang mau ditampilkan.
+1. **Buat fallback jika akses lokasi tidak diberikan**  
+   Misalnya, tampilkan popup yang menjelaskan bahwa aplikasi membutuhkan akses lokasi agar dapat berjalan dengan baik, tetapi tetap berikan opsi untuk tidak memberikan akses.
 
-Misalnya jika aplikasi kita mencari cabang terdekat, kita bisa menampilkan cabang secara umum tanpa lokasi pengguna dan tidak perlu mengurutkan berdasarkan jarak terdekat.
+2. **Sediakan alternatif data jika lokasi tidak tersedia**  
+   Jika pengguna tetap menolak, berikan data yang bersifat umum atau acak agar fitur tetap bisa digunakan secara terbatas. Contoh:  
+   - Jika aplikasi mencari cabang terdekat, tampilkan daftar cabang secara umum tanpa mengurutkan berdasarkan jarak.
 
-
-Jika aplikasi tersebut merupakan aplikasi Presensi yang sangat memerlukan lokasi, kita buat fallback agar lokasi ini menjadi opsional valuenya, jadi jika GPS tidak diizinkan, latitude dan longitudenya akan menjadi value 0. Tetapi backend harus tetap menerima data tersebut. Anda bisa menambahkan Platform pada payload jika memang hal ini cuman berlaku di iOS saja.
+3. **Untuk aplikasi yang sangat bergantung pada lokasi seperti aplikasi Presensi:**  
+   - Buat fallback agar lokasi menjadi opsional.  
+   - Jika GPS tidak diizinkan, kirimkan nilai latitude dan longitude sebagai `0`.  
+   - Backend harus tetap menerima data tersebut tanpa error.  
+   - Tambahkan parameter khusus pada payload (misal `platform: iOS`) untuk menandai kasus khusus ini.

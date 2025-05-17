@@ -4,12 +4,15 @@ sidebar_position: 4
 
 # Privacy Policy
 
-Memahami penggunaan kebijakan privasi pada aplikasi mobile.
+Memahami pentingnya kebijakan privasi pada aplikasi mobile.
 
 ## Aturan Privacy Policy
 
-Developer aplikasi harus membuat link Privacy Policy yang bisa diakses publik, saat ini sudah menjadi hal yang wajib. Link ini harus selalu aktif dan tidak boleh down, karena ketika Anda mengirim update build baru tetapi link privacy policy tidak bisa diakses maka sudah dipastikan update Anda akan ditolak.
+Developer wajib menyediakan **link Privacy Policy** yang dapat diakses secara publik. Saat ini, keberadaan link ini sudah menjadi **persyaratan wajib** untuk semua aplikasi.
 
-Terkadang google berkala mengecek link privacy policy pada rentang waktu tertentu, jika ternyata link mati maka tiba-tiba aplikasi Anda akan menghilang dari Store, meskipun Anda sedang tidak mengirim update build baru.
+Beberapa hal yang perlu diperhatikan:  
+- Link Privacy Policy harus selalu **aktif** dan **tidak boleh down**.  
+- Jika Anda mengirim update aplikasi dan link tersebut tidak bisa diakses, maka update Anda akan otomatis ditolak.  
+- Google juga secara berkala memeriksa link Privacy Policy. Jika link mati, aplikasi Anda bisa tiba-tiba **hilang dari Store**, meskipun Anda tidak sedang mengirim update.
 
-Bikin privacy policy mudah banget tinggal pakai generator aja yang udah tersedia di internet. Soal tampilan tidak perlu harus bagus, only text pun bisa disetujui, yang penting harus bisa diakses.
+Membuat Privacy Policy sebenarnya sangat mudah. Anda bisa menggunakan berbagai **generator Privacy Policy gratis** yang tersedia di internet. Tidak perlu desain yang rumit atau tampilan menarik, yang penting link tersebut dapat diakses dan berisi teks kebijakan yang jelas.

@@ -4,28 +4,35 @@ sidebar_position: 1
 
 # User Generated Content
 
-Memahami tentang publishing aplikasi untuk mobile secara kasus general.
+Memahami penerapan User Generated Content (UGC) pada aplikasi mobile secara umum.
 
 ## Penjelasan Mengenai UGC
 
-User Generated Content mengacu pada konten pada aplikasi yang dibuat oleh user, bukan developer aplikasi itu sendiri. Kriteria yang termasuk UGC seperti:
+User Generated Content (UGC) adalah konten yang dibuat langsung oleh pengguna aplikasi, bukan oleh developer. Contoh konten yang termasuk UGC antara lain:
 
-1. Postingan di forum
-2. Komentar
-3. Ulasan / Feedback / Review
-4. Foto / Video yang diupload
-5. Konten dari Feed social, chat, atau grup
+1. Postingan di forum  
+2. Komentar  
+3. Ulasan, feedback, atau review  
+4. Foto atau video yang diunggah pengguna  
+5. Konten dari feed sosial, chat, atau grup  
 
-### Aturan Mengenai UGC
+## Aturan Mengenai UGC
 
-Sebagai developer aplikasi harus membuat beberapa fitur:
+Sebagai developer, Anda wajib menyediakan fitur-fitur berikut untuk mengelola UGC dengan baik:
 
-1. Aplikasi harus menyediakan fitur **Laporkan** konten untuk user, sehingga user bisa melaporkan seperti konten ofensif, akun palsu, menyebabkan **SARA**, dan pelanggaran kebijakan lainnya
-2. Data laporan tersebut harus disimpan ke database, karena untuk tujuan moderasi. Jadi developer bisa memutuskan apakah ingin menghapus postingan tersebut atau tidak.
-3. Aplikasi harus menyediakan fitur **Edit** dan **Delete** untuk konten. Agar user bisa melakukan moderasi pada kontennya sendiri.
+1. **Fitur Laporkan**  
+   Pengguna harus dapat melaporkan konten yang bermasalah, seperti konten ofensif, akun palsu, konten yang mengandung SARA, atau pelanggaran kebijakan lainnya.
 
-Beberapa hal yang sudah pasti terkena pelanggaran UGC:
+2. **Penyimpanan Data Laporan**  
+   Semua laporan yang masuk harus disimpan di database untuk keperluan moderasi. Developer dapat menggunakan data ini untuk menentukan apakah konten tersebut perlu dihapus atau tidak.
 
-1. Aplikasi forum atau komunitas tanpa moderasi yang memungkinkan ujaran kebencian menyebar bebas.
-2. Aplikasi berbasis foto atau video yang mengizinkan konten pornografi diunggah tanpa filter.
-3. Aplikasi sosial yang memungkinkan pengguna untuk mempublikasikan informasi palsu tanpa ada mekanisme verifikasi atau pelaporan.
+3. **Fitur Edit dan Delete**  
+   Pengguna harus bisa mengedit dan menghapus konten mereka sendiri sebagai bentuk moderasi mandiri.
+
+## Contoh Kasus Pelanggaran UGC
+
+Beberapa situasi yang berpotensi melanggar kebijakan UGC meliputi:
+
+1. Aplikasi forum atau komunitas tanpa sistem moderasi, sehingga ujaran kebencian dapat tersebar bebas.  
+2. Aplikasi berbasis foto atau video yang memperbolehkan unggahan konten pornografi tanpa filter.  
+3. Aplikasi sosial yang membiarkan penyebaran informasi palsu tanpa mekanisme verifikasi atau pelaporan.

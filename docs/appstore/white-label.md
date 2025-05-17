@@ -4,38 +4,36 @@ sidebar_position: 4
 
 # White Label
 
-Memahami tentang White Label pada aplikasi iOS
+Memahami konsep White Label pada aplikasi iOS.
 
 ## Tentang White Label
 
-Konsep White Label ini sering dipakai untuk aplikasi yang sama tetapi berbeda brand. Misalnya kita membuat aplikasi untuk 3 brand yang berbeda tetapi dengan fitur yang sama, paling yang membedakan hanya warna dan icon. Kita bisa menggunakan White Label ini agar tidak membuat aplikasi baru dari awal lagi. Biasanya bisnis model ini dipakai saat kita menawarkan solusi aplikasi ke beberapa brand tetapi ingin seolah brand tersebut membuat aplikasi sendiri.
+White Label adalah konsep pembuatan aplikasi yang sama dengan fitur identik, namun diberi brand berbeda. Contohnya, Anda membuat satu aplikasi yang digunakan untuk 3 brand berbeda, dengan perbedaan hanya pada warna, ikon, dan branding lain. Dengan White Label, Anda tidak perlu membuat aplikasi baru dari awal setiap kali ada client baru. Model bisnis ini umum digunakan saat menawarkan solusi aplikasi ke berbagai brand yang ingin terlihat seperti memiliki aplikasi sendiri.
 
 ## Masalah
 
-Jika kita mengirim aplikasi White Label ke App Store, ada kemungkinkan akan ditolak jika tidak mengikuti aturan atau cara main yang benar. Karena Apple akan menganggap ini aplikasi Spam. 
+Apple memiliki kebijakan ketat terkait aplikasi White Label. Jika tidak mengikuti aturan, aplikasi Anda berpotensi ditolak karena dianggap sebagai spam oleh tim review Apple.
 
-<blockquote>
-Don’t create multiple Bundle IDs of the same app. If your app has different versions for specific locations, sports teams, universities, etc., consider submitting a single app and provide the variations using in-app purchase.
-</blockquote>
+> **Don’t create multiple Bundle IDs of the same app. If your app has different versions for specific locations, sports teams, universities, etc., consider submitting a single app and provide the variations using in-app purchase.**
 
-Kalian bisa melihat lebih detail mengenai larangannya pada [App Review Guideline 4.3 SPAM](https://developer.apple.com/app-store/review/guidelines/#spam).
+Anda dapat mempelajari lebih lanjut aturan ini pada [App Review Guideline 4.3 SPAM](https://developer.apple.com/app-store/review/guidelines/#spam).
 
 ## Solusi
 
-1. Buatlah satu aplikasi dengan satu Bundle ID, tetapi di dalamnya terdapat beberapa brand yang bisa dipilih oleh pengguna. Misalnya dengan menambahkan **dropdown list** atau **autocomplete textfield** yang berisi daftar nama perusahaan yang bisa login ke aplikasi kita.
+1. **Satu aplikasi, satu Bundle ID**  
+   Buatlah satu aplikasi dengan satu Bundle ID yang di dalamnya menyediakan opsi bagi pengguna untuk memilih brand. Contohnya, gunakan dropdown list atau autocomplete textfield yang berisi daftar brand/perusahaan yang dapat login ke aplikasi.
 
-2. Aplikasi White Label harus mempunyai akun Apple Developer yang berbeda. Jadi meskipun aplikasinya serupa, Anda harus membedakan dari segi warna, icon, nama aplikasi, dan Akun Apple Developer yang berbeda. Misalnya jika kita membuat aplikasi untuk 3 brand yang berbeda, kita bisa membuat 3 akun Apple Developer yang berbeda juga.
+2. **Gunakan akun Apple Developer berbeda untuk setiap brand**  
+   Jika Anda tetap ingin membuat aplikasi terpisah untuk tiap brand, pastikan setiap aplikasi memiliki warna, ikon, nama aplikasi, dan akun Apple Developer yang berbeda. Misalnya, jika Anda membuat aplikasi untuk 3 brand, maka sebaiknya menggunakan 3 akun Apple Developer yang berbeda.
 
-## Penerapan Code
+## Penerapan Kode
 
-Untuk menerapkan sistem white label kamu tidak perlu membuat banyak repository project untuk tiap client, karena nanti akan menyusahkan dikemudian hari. Bayangkan kamu punya 30 client, dan saat kamu menambah fitur baru code tersebut harus kamu copy paste ke 30 project yang berbeda. Best Practicenya white label ada 2 cara:
-1. Menggunakan satu project dengan banyak flavor
-2. Menggunakan satu project dengan config dinamis
+Membangun sistem White Label yang efektif tidak perlu dilakukan dengan membuat banyak repository project terpisah untuk setiap client, karena ini akan menyulitkan saat ada update fitur baru. Bayangkan jika Anda memiliki 30 client, maka setiap update harus dilakukan 30 kali. Berikut adalah dua praktik terbaik dalam mengelola White Label:
 
-### Menggunakan satu project dengan banyak flavor
+1. **Satu project dengan banyak flavor**  
+   Dengan flavor, Anda bisa membuat banyak varian dari satu project. Misalnya, jika ada 3 client, buat 3 flavor bernama **client1**, **client2**, dan **client3**. Setiap flavor dapat disesuaikan warna, logo, dan ikon sesuai kebutuhan client.  
+   Untuk referensi lebih lengkap, lihat dokumentasi [Build Variants](https://developer.android.com/studio/build/build-variants).
 
-Dengan menggunakan flavor kita bisa membuat banyak varian dari satu project. Misalnya kita punya 3 client, kita bisa membuat 3 flavor dengan nama **client1**, **client2**, dan **client3**. Dengan ini kita bisa mengubah warna, logo, dan icon sesuai dengan client yang kita inginkan. Untuk lebih jelasnya bisa dilihat di [Build Variants](https://developer.android.com/studio/build/build-variants).
-
-### Menggunakan satu project dengan config dinamis
-
-Dengan menggunakan config dinamis kita bisa membuat satu project dengan satu flavor tetapi kita bisa mengubah warna, logo, dan icon sesuai dengan client yang kita inginkan berdasarkan config. Misalnya kita punya 3 client, kita bisa membuat 3 file config dengan nama **client1.json**, **client2.json**, dan **client3.json**. Pada tahap ini biasanya kita perlu membuat script sendiri karena pasti akan berbeda-beda kebutuhannya
+2. **Satu project dengan konfigurasi dinamis**  
+   Menggunakan konfigurasi dinamis memungkinkan satu project dan satu flavor, tapi dapat mengubah warna, logo, dan ikon berdasarkan file konfigurasi yang berbeda. Misalnya, buat file konfigurasi **client1.json**, **client2.json**, dan **client3.json**.  
+   Biasanya, Anda perlu membuat script khusus untuk mengelola konfigurasi ini sesuai kebutuhan spesifik setiap client.

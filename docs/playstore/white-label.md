@@ -4,43 +4,52 @@ sidebar_position: 2
 
 # White Label
 
-Memahami tentang White Label pada aplikasi Android
+Memahami konsep White Label pada aplikasi Android
 
 ## Tentang White Label
 
-Konsep White Label ini sering dipakai untuk aplikasi yang sama tetapi berbeda brand. Misalnya kita membuat aplikasi untuk 3 brand yang berbeda tetapi dengan fitur yang sama, paling yang membedakan hanya warna dan icon. Kita bisa menggunakan White Label ini agar tidak membuat aplikasi baru dari awal lagi. Biasanya bisnis model ini dipakai saat kita menawarkan solusi aplikasi ke beberapa brand tetapi ingin seolah brand tersebut membuat aplikasi sendiri.
+White Label adalah konsep membuat satu aplikasi dengan fitur yang sama untuk beberapa brand berbeda. Misalnya, kita membuat aplikasi untuk 3 brand berbeda, tapi fitur utamanya sama; yang membedakan hanya warna, ikon, dan branding. Dengan White Label, kita tidak perlu membuat aplikasi baru dari awal untuk setiap brand. Model bisnis ini umum dipakai ketika menawarkan solusi aplikasi ke beberapa brand, sehingga tiap brand terlihat seperti memiliki aplikasi sendiri.
 
 ## Masalah
 
-Play Store sendiri tidak terlalu melarang keras aplikasi White Label, tetapi kita harus memperhatikan beberapa hal agar aplikasi kita tidak ditolak oleh Tim Reviewer Google. Karena Google akan menganggap ini aplikasi Spam.
-Tim Reviewer Google akan menolak aplikasi kita jika:
-1. Aplikasi kita tidak mempunyai fitur yang berbeda dengan aplikasi lain yang sudah ada di Play Store.
-2. Aplikasi mempunyai Nama, Warna, Logo, Icon, Deskripsi, dan Screenshot yang sama dengan aplikasi lain yang sudah ada di Play Store.
+Google Play Store tidak melarang penggunaan White Label secara tegas, namun ada beberapa hal yang harus diperhatikan agar aplikasi tidak ditolak oleh Tim Reviewer Google. Google bisa menganggap aplikasi White Label sebagai spam jika:
+
+1. Aplikasi tidak memiliki fitur yang membedakan dari aplikasi lain di Play Store.
+2. Aplikasi memiliki nama, warna, logo, ikon, deskripsi, dan screenshot yang sama persis dengan aplikasi lain di Play Store.
 
 ## Solusi
 
-Ada beberapa solusi yang bisa kita lakukan agar aplikasi kita tidak ditolak oleh Tim Reviewer Google, tetapi tidak selamanya ini bisa diterima, selebihnya kita harus mencari tau lagi celah untuk bisa diterima oleh Tim Reviewer Google.
-1. Gunakan satu aplikasi dengan satu akun. Jadi meskipun aplikasinya serupa, Anda harus menguploadnya di akun Play Store Developer milik client itu sendiri.
-2. Pastikan Nama, Warna, Logo, Icon, Deskripsi dan Screenshot berbeda dengan aplikasi yang sudah ada.
+Beberapa langkah yang bisa dilakukan agar aplikasi White Label diterima oleh Tim Reviewer Google, meskipun tidak selalu 100% berhasil, antara lain:
 
-Untuk best practice White Label yang dianjurkan oleh Google bisa dilihat di [Best Practices for White Label Developers](https://support.google.com/googleplay/android-developer/answer/15884185?hl=en).
+1. Gunakan akun Play Store Developer yang berbeda untuk setiap aplikasi. Meskipun aplikasinya mirip, upload aplikasi di akun milik masing-masing client.
+2. Pastikan nama, warna, logo, ikon, deskripsi, dan screenshot berbeda untuk setiap aplikasi.
+
+Untuk panduan terbaik terkait White Label, Anda bisa melihat langsung di [Best Practices for White Label Developers](https://support.google.com/googleplay/android-developer/answer/15884185?hl=en).
 
 ## Pengalaman Penulis
 
-Saya pernah membuat aplikasi White Label untuk banyak sekolah, kalau ditotal bisa ratusan aplikasi dalam satu akun Play Store Developer yang sama. Tetapi semuanya lolos-lolos saja. Saya membuat perbedaan mulai dari Nama Aplikasi, Warna, Logo, Deskripsi. Pastikan Screenshot memunculkan halaman general yang tidak ada logo client tertentu. Dan juga ada beberapa pembeda fitur di dalamnya karena terdiri dari dua paket, Basic dan Ultimate. Tidak semua sekolah memilih paket yang sama, jadi ini bisa menjadi pembeda antara satu aplikasi dengan aplikasi lainnya.
+Saya pernah membuat aplikasi White Label untuk banyak sekolah, totalnya bisa mencapai ratusan aplikasi dalam satu akun Play Store Developer yang sama. Semua aplikasi berhasil lolos review. Perbedaan yang saya buat antara lain:
 
-Hanya saja publishing semacam ini akan mereportkan developer itu sendiri terutama dalam segi update. Jika kita ada perubahan maka kita harus melakukan push update ke ratusan aplikasi tersebut. Kalau dilakukan manual akan sangat melelahkan. Terakhir saya membuat sebuah tools dengan Python untuk meng-automasi upload ke Play Store. Tools ini bisa melakukan build dan upload ke ratusan aplikasi dalam waktu yang bersamaan.
+- Nama aplikasi yang berbeda  
+- Warna, logo, dan deskripsi yang berbeda  
+- Screenshot menampilkan halaman umum tanpa logo client tertentu  
+- Perbedaan fitur karena ada dua paket: Basic dan Ultimate. Tidak semua sekolah memilih paket yang sama, sehingga fitur juga menjadi pembeda.
 
-## Penerapan Code
+Namun, mengelola banyak aplikasi dalam satu akun sangat merepotkan terutama saat update. Setiap perubahan harus di-push ke ratusan aplikasi tersebut, dan jika dilakukan manual sangat melelahkan. Oleh karena itu, saya membuat sebuah tools menggunakan Python untuk mengotomasi proses build dan upload aplikasi secara bersamaan ke Play Store.
 
-Untuk menerapkan sistem white label kamu tidak perlu membuat banyak repository project untuk tiap client, karena nanti akan menyusahkan dikemudian hari. Bayangkan kamu punya 30 client, dan saat kamu menambah fitur baru code tersebut harus kamu copy paste ke 30 project yang berbeda. Best Practicenya white label ada 2 cara:
-1. Menggunakan satu project dengan banyak flavor
-2. Menggunakan satu project dengan config dinamis
+## Penerapan Kode White Label
+
+Untuk sistem White Label, sebaiknya tidak membuat banyak repository project terpisah untuk tiap client, karena hal ini akan menyulitkan saat pengembangan fitur baru. Bayangkan jika ada 30 client, setiap perubahan harus di-copy paste ke 30 project berbeda.
+
+Best practice White Label ada dua cara utama:
+
+1. **Menggunakan satu project dengan banyak flavor**  
+2. **Menggunakan satu project dengan konfigurasi dinamis**
 
 ### Menggunakan satu project dengan banyak flavor
 
-Dengan menggunakan flavor kita bisa membuat banyak varian dari satu project. Misalnya kita punya 3 client, kita bisa membuat 3 flavor dengan nama **client1**, **client2**, dan **client3**. Dengan ini kita bisa mengubah warna, logo, dan icon sesuai dengan client yang kita inginkan. Untuk lebih jelasnya bisa dilihat di [Build Variants](https://developer.android.com/studio/build/build-variants).
+Dengan menggunakan flavor, kita bisa membuat banyak varian dari satu project. Misalnya, punya 3 client, kita buat 3 flavor dengan nama **client1**, **client2**, dan **client3**. Dengan cara ini, kita bisa mengubah warna, logo, dan ikon sesuai client. Untuk penjelasan lebih lengkap bisa lihat di [Build Variants](https://developer.android.com/studio/build/build-variants).
 
-### Menggunakan satu project dengan config dinamis
+### Menggunakan satu project dengan konfigurasi dinamis
 
-Dengan menggunakan config dinamis kita bisa membuat satu project dengan satu flavor tetapi kita bisa mengubah warna, logo, dan icon sesuai dengan client yang kita inginkan berdasarkan config. Misalnya kita punya 3 client, kita bisa membuat 3 file config dengan nama **client1.json**, **client2.json**, dan **client3.json**. Pada tahap ini biasanya kita perlu membuat script sendiri karena pasti akan berbeda-beda kebutuhannya
+Dengan konfigurasi dinamis, kita membuat satu project dengan satu flavor, tapi bisa mengubah warna, logo, dan ikon berdasarkan file konfigurasi untuk tiap client. Misalnya, punya 3 client, kita buat 3 file konfigurasi: **client1.json**, **client2.json**, dan **client3.json**. Biasanya, tahap ini memerlukan pembuatan script khusus karena kebutuhan tiap project berbeda-beda.

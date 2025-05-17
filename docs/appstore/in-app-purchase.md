@@ -2,25 +2,33 @@
 sidebar_position: 9
 ---
 
-# In App Purchase
+# In App Purchase (IAP)
 
 Memahami tentang In App Purchase (IAP) untuk iOS
 
 ## Informasi Penting
 
-1. Untuk melakukan testing IAP Anda harus membuat akun **Apple Id Sandbox**, dan mengetesnya pada perangkat fisik dan melakukan pembayaran pada environment **Sandbox**. Saat fitur sudah jalan di Sandbox, Anda harus submit apps agar aplikasi baru dan IAP nya diapprove sama Apple.
-    
-    Sering terjadi kejadian dimana saat di Sandbox produknya muncul, tapi di tim reviewer Apple tidak atau bahkan pembayaran gagal.
-    
-    Ini hal wajar karena memang perlu waktu dari sisi server Applenya. Saran yang bisa dilakukan:
-    
-    1. Lakukan **Testflight Testing**, dan pembayaran menggunakan environment Testflight.
-    2. Jika pada Testflight muncul, berarti memang butuh waktu dan tetap lakukan resubmit apps meskipun di reject sama Apple, nanti ada waktunya dimana pada device mereka sudah muncul.
-    3. Hal ini terjadi karena environment yang mereka pakai itu hampir sama dengan Productions.
-2. Saat memakai IAP bertipe Subscriptions Anda harus membuat fitur **Restore Purchase**. Fitur ini berfungsi jika pengguna ganti hp tapi masih pakai akun apple id yang sama, maka pembayaran di aplikasi bisa dipulihkan.
-3. Saat menentukan harga pada IAP Items kita tidak bisa menginput bebas angkanya, melainkan harus milih berdasarkan urutan Tier. Jadi **Tier 1**, **Tier 2**, dan seterusnya sudah terdapat harganya dalam satuan dollar, tapi kita bisa melihat jika pada mata uang negara lain akan menjadi berapa harganya.
-Nantinya harga yang muncul di device masing-masing mengikuti dari region negara devicenya.
+1. **Testing IAP dengan Apple Id Sandbox**  
+   Untuk menguji IAP, Anda harus membuat akun **Apple ID Sandbox** dan melakukan testing di perangkat fisik menggunakan environment **Sandbox**. Setelah fitur berjalan di Sandbox, Anda perlu submit aplikasi agar Apple dapat melakukan review dan menyetujui aplikasi beserta IAP-nya.
 
-4. Saat memasang IAP Anda harus menambahkan **Capabilities In App Purchase** lewat XCode
-5. Ketika sudah bikin IAP Items kenapa saat ditampilkan pada aplikasi productnya tidak muncul di environment Sandbox? Padahal sudah lewat dari sehari.
-Coba pastikan di Agreement, **Tax & Banking** dan bagian **Paid Apps** di Appstore Connect statusnya sudah **Active** Warna Hijau. Disana kita harus mengisi informasi rekening bank.
+   > Sering terjadi kasus di mana produk muncul di Sandbox, tetapi tidak muncul atau pembayaran gagal saat diuji oleh tim reviewer Apple. Ini normal karena server Apple membutuhkan waktu sinkronisasi.
+
+   **Tips untuk mengatasi hal ini:**  
+   - Gunakan **TestFlight Testing** dan lakukan pembayaran di environment TestFlight.  
+   - Jika produk muncul di TestFlight, berarti proses sudah berjalan dan Anda bisa tetap melakukan submit ulang aplikasi meskipun pernah ditolak.  
+   - Hal ini terjadi karena environment yang digunakan reviewer hampir sama dengan environment produksi.
+
+2. **Fitur Restore Purchase untuk Subscriptions**  
+   Jika aplikasi Anda menggunakan IAP tipe subscription, wajib menyediakan fitur **Restore Purchase**. Fungsi ini memungkinkan pengguna memulihkan pembelian jika mengganti perangkat, selama menggunakan Apple ID yang sama.
+
+3. **Penentuan Harga Berdasarkan Tier**  
+   Harga untuk IAP tidak bisa diatur bebas. Anda harus memilih berdasarkan **Tier** yang sudah ditentukan Apple (Tier 1, Tier 2, dst). Setiap tier memiliki harga dalam satuan dolar, dan akan otomatis dikonversi ke mata uang lokal sesuai region device pengguna.
+
+4. **Aktifkan Capabilities In App Purchase di Xcode**  
+   Jangan lupa menambahkan capability **In App Purchase** di pengaturan project Xcode Anda agar fitur ini dapat berjalan.
+
+5. **Produk IAP Tidak Muncul di Environment Sandbox?**  
+   Jika produk IAP tidak muncul setelah lebih dari 24 jam:  
+   - Pastikan status pada bagian **Agreement, Tax & Banking** di App Store Connect sudah **Active** (ditandai warna hijau).  
+   - Pastikan semua data rekening bank sudah terisi lengkap di bagian **Paid Apps**.  
+   Tanpa status ini aktif, produk IAP tidak akan muncul di environment Sandbox.

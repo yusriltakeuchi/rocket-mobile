@@ -4,12 +4,14 @@ sidebar_position: 3
 
 # Sistem Transaksi
 
-Memahami tentang sistem transaksi pada aplikasi mobile.
+Memahami sistem transaksi pada aplikasi mobile.
 
 ## Transaksi atau Pembayaran
 
-Aplikasi Anda tidak boleh melakukan pembayaran atau transaksi di luar aplikasi itu sendiri. Misalnya ingin melakukan langganan atau perpanjang member, tetapi dilakukan di WhatsApp atau situs pribadi maka akan ditolak oleh Apple.
+Aplikasi Anda **tidak diperbolehkan melakukan pembayaran atau transaksi di luar aplikasi** itu sendiri. Misalnya, jika pengguna ingin berlangganan atau memperpanjang membership, proses tersebut harus dilakukan **di dalam aplikasi**. Jika pembayaran dilakukan melalui WhatsApp, situs pribadi, atau saluran lain di luar aplikasi, maka aplikasi Anda berisiko ditolak oleh Apple.
 
-## In App Purchase / Payment Gateway?
+## In App Purchase atau Payment Gateway?
 
-Jika produk yang akan dibeli di aplikasi kita berupa digital product, maka harus pakai In App Purchase. Tapi jika produk fisik atau jasa atau booking fasilitas offline yang ingin dibeli maka bisa menggunakan Payment Gateway. 
+- **Produk digital** yang dijual di dalam aplikasi wajib menggunakan **In App Purchase (IAP)** sesuai ketentuan Apple dan Google. Contoh produk digital seperti langganan premium, upgrade fitur, konten digital, dan sejenisnya.
+
+- **Produk fisik, jasa, atau booking fasilitas offline** dapat menggunakan **Payment Gateway** eksternal. Contohnya: pembelian barang fisik, pemesanan layanan offline, tiket event, dan lain-lain.

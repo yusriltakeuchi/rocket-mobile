@@ -4,10 +4,15 @@ sidebar_position: 8
 
 # Account Deletion
 
-Memahami tentang fitur Account Deletion pada iOS
+Memahami tentang fitur **Account Deletion** pada iOS.
 
 ## Informasi Penting
 
-Jika aplikasi kita mempunyai fitur **Registrasi Akun**, maka kita harus membuat fitur **Delete Akun** juga. Biasanya menunya diletakan di halaman profile. Kita harus memberikan popup konfirmasi yang bisa dipilih oleh pengguna sebelum menghapus akun, guna mencegah kecelakaan salah klik dan akun terhapus.
+Jika aplikasi Anda memiliki fitur **Registrasi Akun**, maka wajib menyediakan fitur **Delete Akun**. Biasanya fitur ini ditempatkan di halaman profil pengguna.
 
-Biasanya secara sistem Mobile akan melakukan Fetch API ke backend untuk menghapus akun, tetapi di backend tidak benar-benar dihapus, hanya diberi flagging saja. Sehingga akun tersebut tidak bisa login kembali.
+Beberapa hal yang perlu diperhatikan:
+
+- Berikan popup konfirmasi sebelum proses penghapusan akun untuk menghindari kesalahan klik yang tidak disengaja.
+- Saat pengguna menghapus akun, aplikasi biasanya akan melakukan **Fetch API** ke backend untuk memproses penghapusan.
+- Namun, di backend akun biasanya tidak benar-benar dihapus secara permanen, melainkan diberi status **flagging** atau penandaan sebagai akun yang sudah dihapus.
+- Akun yang sudah dihapus tidak dapat digunakan untuk login kembali.

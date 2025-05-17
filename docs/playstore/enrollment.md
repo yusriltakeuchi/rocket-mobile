@@ -6,40 +6,46 @@ sidebar_position: 1
 
 Memahami tentang enrollment akun developer di Play Store.
 
-## Biaya Akun
 
-Untuk membuat akun Google Play Developer cukup memerlukan biaya **$25**, akun bisa diakses selamanya tanpa ada biaya tambahan lain. Kalian harus menyiapkan Credit Card untuk pembayaran. Biasanya akan diminta input pada step terakhir registrasi akun developer. Pastikan saldonya ada lebih, tidak dianjurkan pas **$25**, misalnya jadi **$28**. Karena Google akan memverifikasi kartu terlebih dahulu dengan mengenakan biaya **$1**. Jika saldo tidak mencukupi maka proses registrasi akan gagal. Jika berhasil saldo $1 sebelumnya akan otomatis direfund dan setelah itu $25 + Pajak 11% nya akan dipotong.
+## Jenis Dan Biaya Akun
+
+1. **Individual (Personal)** Biaya pendaftaran sekali bayar $25 (tanpa biaya tahunan). Saat registrasi, Google akan memverifikasi kartu kredit dengan potongan sementara $1 untuk memastikan kartu valid. Potongan ini akan dikembalikan (refund) otomatis setelah verifikasi. Pastikan saldo kartu lebih dari $25 agar proses berhasil. Akun aktif selamanya tanpa biaya tambahan.
+
+2. **Organization / Company** Sama seperti akun Individual, biaya pendaftaran sekali bayar $25 dengan proses verifikasi kartu dan potongan sementara $1 yang akan direfund. Cocok untuk perusahaan yang ingin mengelola aplikasi secara resmi. Anda membutuhkan **DUNS Number** untuk proses ini.
+
 
 ## Verifikasi Akun
 
-Jika Anda mendaftar sebagai akun Individual, Anda akan diminta mengirim dokumen berikut:
-1. KTP
-2. Passport
-3. SIM
+### Untuk Akun Individual  
+Anda diminta mengirim salah satu dokumen identitas berikut:  
+1. KTP  
+2. Paspor  
+3. SIM  
 
-Sedangkan jika Company, Anda akan diminta mengirim dokumen yang tertera dibawah, Anda bisa memilih satu dari dokumen berikut:
-1. Company registration certificate
-2. Articles of association
-3. Company deed
-4. Business license
-4. Tax registration certificate
+### Untuk Akun Company  
+Anda perlu mengirim salah satu dokumen perusahaan berikut:  
+1. Surat keterangan pendaftaran perusahaan (Company registration certificate)  
+2. Anggaran dasar perusahaan (Articles of association)  
+3. Akta perusahaan (Company deed)  
+4. Izin usaha (Business license)  
+5. Surat tanda daftar pajak (Tax registration certificate)  
 
-Pastikan dokumen yang Anda kirimkan adalah dokumen yang valid dan sesuai dengan nama akun developer yang Anda daftarkan. Jika tidak, maka akun developer Anda akan ditolak oleh Tim Reviewer Google.
+Pastikan dokumen yang dikirim valid dan sesuai dengan nama akun developer yang didaftarkan. Jika tidak sesuai, pendaftaran Anda bisa ditolak oleh Tim Reviewer Google.
 
-Selanjutnya Anda akan diminta mengirimkan dokumen identitas. Anda bisa memilih seperti:
-1. KTP
-2. Passport
-3. SIM
+### Dokumen Identitas Tambahan  
+Selain dokumen utama, Anda juga diminta mengirim dokumen identitas berupa:  
+1. Foto depan dokumen  
+2. Foto belakang dokumen  
+3. Form alamat lengkap sesuai dokumen  
 
-Bentuk dokumennya berupa: 
-1. Foto Depan Dokumen
-2. Foto Belakang Dokumen
-3. Alamat Lengkap Sesuai Dokumen (Form)
+---
 
 ## Verifikasi Website
 
-Anda akan diminta untuk mengirimkan website yang valid. Biasanya Google akan mengirim verifikasi ke Google Search Console. Jika tidak mempunyai website, Anda bisa membuat gratis dengan Google Sites. Jika sudah punya pastikan website Anda sudah didaftar di Google Search Console.
+Anda harus mengirimkan website yang valid. Google biasanya akan melakukan verifikasi melalui Google Search Console. Jika belum punya website, Anda bisa membuat website gratis menggunakan Google Sites. Pastikan website Anda sudah terdaftar di Google Search Console agar proses verifikasi berjalan lancar.
 
-## Verifikasi Phone Number
+---
 
-Anda akan diminta untuk mengirimkan nomor telepon yang valid. Pastikan nomor telepon Anda aktif karena akan menerima kode OTP dari Google.
+## Verifikasi Nomor Telepon
+
+Anda wajib mengirim nomor telepon aktif yang valid. Nomor ini akan digunakan untuk menerima kode OTP dari Google sebagai bagian dari proses verifikasi.

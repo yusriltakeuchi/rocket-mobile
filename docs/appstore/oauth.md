@@ -2,12 +2,23 @@
 sidebar_position: 6
 ---
 
-# OAuth Login
+# Social OAuth Login
 
-Memahami tentang fitur OAuth pada iOS
+Memahami fitur OAuth pada iOS dan aturan terkait penggunaan social login.
 
-## Aturan Fitur Social OAuth Sign In
+## Aturan Penggunaan Social OAuth Sign-In
 
-Kalau aplikasi Anda mempunyai fitur untuk Login menggunakan social seperti **Google**, **Facebook**, atau platform lainnya, maka Anda diwajibkan memasang **Apple Sign In** juga di aplikasinya. Karena jika tidak aplikasi Anda bisa ditolak saat proses Review. Untuk Button Apple Sign In harus mengikuti standarisasi mereka. Disarankan menggunakan template yang sudah ada dari librarynya. 
+Jika aplikasi Anda menyediakan fitur login menggunakan akun sosial seperti **Google**, **Facebook**, atau platform OAuth lainnya, maka Anda diwajibkan untuk juga menyediakan opsi **Sign in with Apple**. 
 
-Misalnya jika Background gelap, maka Buttonnya harus putih dan teksnya hitam. Tapi jika backgroudnya terang, button harus hitam dan teksnya putih
+Hal ini wajib agar aplikasi Anda lolos proses review di App Store. Jika tidak menyediakan fitur Sign in with Apple, aplikasi Anda berpotensi ditolak oleh Apple.
+
+### Standarisasi Tombol Apple Sign In
+
+Tombol **Sign in with Apple** harus mengikuti panduan desain resmi dari Apple. Disarankan menggunakan template tombol yang sudah disediakan oleh library Apple atau pihak ketiga yang terpercaya agar sesuai standar.
+
+Contoh aturan warna tombol berdasarkan background aplikasi:
+
+- **Background gelap**: tombol harus berwarna putih dengan teks hitam.  
+- **Background terang**: tombol harus berwarna hitam dengan teks putih.
+
+Mematuhi aturan ini penting untuk menjaga konsistensi tampilan dan kenyamanan pengguna saat menggunakan fitur login Apple.

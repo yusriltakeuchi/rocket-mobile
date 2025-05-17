@@ -4,21 +4,35 @@ sidebar_position: 5
 
 # Account Based Feature
 
-Memahami tentang fitur berbasis akun pada aplikasi mobile.
+Memahami fitur berbasis akun pada aplikasi mobile.
 
-## Aturan ABF
+## Aturan Account Based Feature (ABF)
 
-Saat aplikasi kita terdapat fitur yang bukan account based maka proses login menjadi tidak wajib (opsional).
-Account based ini berarti fitur yang memang memerlukan akun / login untuk mengaksesnya seperti:
+Jika sebuah fitur **bukan** berbasis akun (non-account based), maka proses login tidak wajib alias **opsional**.  
 
-- Booking treatment
-- Buat komentar
-- Buat postingan
-- Lapor
-- dan sejenisnya yang memang perlu mengirim user_id
+Fitur berbasis akun (account based) adalah fitur yang **memerlukan login** untuk mengaksesnya, contohnya:  
+- Booking treatment  
+- Membuat komentar  
+- Membuat postingan  
+- Melapor  
+- Fitur lain yang memerlukan pengiriman `user_id`  
 
-Jadi jika fitur kita tidak account based, itu harus bisa diakses tanpa login. Contohnya seperti apa?
+Sebaliknya, fitur yang **bukan account based** harus bisa diakses tanpa login.
 
-1. Sebuah aplikasi e-commerce dimana menyediakan banyak produk yang bisa dilihat oleh pengguna sebelum membeli. Saat aplikasi pertama dibuka, mereka langsung bisa melihat seluruh produk yang ada di dalamnya. Tetapi saat dia ingin Menambah Favorite, Memasukan ke Keranjang, Melihat Profile, Mengatur Alamat, baru disana dia akan dipaksa untuk Login. Jadi fitur List Product, Category dan sejenisnya bukanlah Account Based Features.
+### Contoh Penerapan
 
-2. Sebuah aplikasi membeli ebook. Saat aplikasi dibuka kita langsung bisa melihat seluruh buku yang dijual di dalamnya, maupun melihat detailnya. Tetapi saat kita ingin membeli buku tersebut baru user dipaksa untuk Login.
+1. **Aplikasi e-commerce**  
+   Pengguna bisa langsung melihat daftar produk dan kategori tanpa login saat pertama membuka aplikasi. Namun, ketika ingin:  
+   - Menambahkan produk ke favorit  
+   - Memasukkan produk ke keranjang  
+   - Melihat profil  
+   - Mengatur alamat  
+   
+   maka pengguna akan diminta login terlebih dahulu. Jadi, fitur seperti daftar produk dan kategori bukan fitur berbasis akun.
+
+2. **Aplikasi pembelian ebook**  
+   Pengguna dapat melihat seluruh koleksi buku dan detailnya tanpa login. Namun, saat ingin membeli buku, pengguna harus melakukan login terlebih dahulu.
+
+---
+
+Dengan demikian, fitur yang membutuhkan data atau interaksi personal harus dilindungi dengan proses login, sementara fitur umum dapat diakses secara bebas.
