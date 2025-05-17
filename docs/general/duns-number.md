@@ -77,7 +77,7 @@ Mulai 2024, Google Play Store mewajibkan akun developer **organisasi/perusahaan*
 Jika mendaftar sebagai **individu**, D-U-N-S Number tidak diperlukan.
 
 Verifikasi bisnis Google Play diatur di:  
-📖 [Panduan Verifikasi Bisnis Google Play](https://support.google.com/googleplay/android-developer/answer/9876932?hl=id)
+📖 [Panduan Verifikasi Bisnis Google Play](https://support.google.com/googleplay/android-developer/answer/14177239?hl=id)
 
 ---
 
