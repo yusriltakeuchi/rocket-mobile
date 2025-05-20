@@ -4,6 +4,10 @@ sidebar_position: 5
 
 # Changelog
 
+## 2025-05-20
+
+- Menambahkan appstore/renewal.md
+
 ## 2025-05-17
 
 - Improvisasi penulisan berbagai dokumen agar lebih jelas dan mudah dipahami  
