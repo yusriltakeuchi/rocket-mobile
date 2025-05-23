@@ -1,0 +1,158 @@
+---
+sidebar_position: 2
+---
+
+import Enrollment1 from '/img/enrollment1.png';
+import Enrollment2 from '/img/enrollment2.png';
+import Enrollment3 from '/img/enrollment3.png';
+import Enrollment4 from '/img/enrollment4.png';
+import Enrollment5 from '/img/enrollment5.png';
+import Enrollment6 from '/img/enrollment6.png';
+import Enrollment7 from '/img/enrollment7.png';
+import Enrollment8 from '/img/enrollment8.png';
+import Enrollment9 from '/img/enrollment9.png';
+import Enrollment10 from '/img/enrollment10.png';
+import Enrollment11 from '/img/enrollment11.png';
+import Enrollment12 from '/img/enrollment12.png';
+import Enrollment13 from '/img/enrollment13.png';
+import Enrollment14 from '/img/enrollment14.png';
+import Enrollment15 from '/img/enrollment15.png';
+import EnrollmentSuccess from '/img/enrollment-success.png';
+import EnrollmentSuccess2 from '/img/enrollment-success2.png';
+import EnrollmentError from '/img/enrollment-error.png';
+import EnrollmentError2 from '/img/enrollment-error2.png';
+
+# Enrollment V2
+
+Panduan terbaru untuk melakukan pendaftaran akun Apple Developer menggunakan aplikasi resmi **Apple Developer App** di perangkat macOS atau iOS.
+
+## Metode Baru
+
+Sebelumnya, pendaftaran akun Apple Developer dilakukan melalui situs resmi [Apple Developer Enroll](https://developer.apple.com/programs/enroll/). Namun, dalam beberapa kasus, metode tersebut sering menemui kendala pada tahap verifikasi dan pembayaran.
+
+Kini, Apple menyarankan menggunakan aplikasi [Apple Developer App](https://apps.apple.com/id/app/apple-developer/id640199958) untuk proses pendaftaran. Aplikasi ini memberikan pengalaman pendaftaran yang lebih lancar dan langsung terintegrasi dengan perangkat Apple Anda.
+
+## Perbandingan Metode
+
+| **Aspek**                   | **Web Enrollment**                            | **Apple Developer App**                   |
+|----------------------------|-----------------------------------------------|-------------------------------------------|
+| **Proses Pendaftaran**     | Melalui website                               | Melalui aplikasi di macOS/iOS             |
+| **Metode Pembayaran**      | Hanya kartu kredit                            | Kartu kredit, ShopeePay, DANA, GoPay      |
+| **Verifikasi OTP Email**   | Diperlukan                                    | Tidak diperlukan                           |
+| **Durasi Proses**          | ± 2 hari kerja                                | Instan                                     |
+| **Perangkat Diperlukan**   | Tidak harus login perangkat Apple             | Harus login ke perangkat Apple            |
+| **Perpanjangan Tahunan**   | Manual                                        | Otomatis                                   |
+
+---
+
+## Persiapan Sebelum Enroll
+
+Sebelum memulai proses, pastikan Anda telah menyiapkan hal-hal berikut:
+
+1. **Apple ID Aktif:**  
+   Buat atau pastikan Anda memiliki Apple ID yang sudah terverifikasi. Login ke perangkat Mac/iPhone Anda menggunakan Apple ID tersebut.  
+   > ⚠️ Pastikan Apple ID yang digunakan adalah sama dengan yang akan digunakan untuk mendaftar program Apple Developer.
+
+2. **Metode Pembayaran:**  
+   Tambahkan informasi pembayaran melalui **System Settings → Account → Payment & Shipping**.
+
+3. **Untuk Akun Organization:**  
+   Siapkan email kerja resmi dan website perusahaan aktif.
+
+4. **Dokumen Pendukung:**  
+   Pastikan Anda memiliki dokumen legal seperti KTP, DUNS Number (untuk Organization), dan bukti status perusahaan (jika diperlukan).
+
+---
+
+## Langkah-Langkah Enrollment di Apple Developer App
+
+1. **Login ke Perangkat Apple**   
+   Login ke Mac atau iPhone menggunakan Apple ID yang akan didaftarkan.
+   <img src={Enrollment1} alt="Login Apple ID" style={{width: 400}} />
+
+2. **Cek Metode Pembayaran**   
+   Buka **System Settings → Account → Payment & Shipping**. Pastikan metode pembayaran sudah ditambahkan.
+   <img src={Enrollment2} alt="Payment Settings" style={{width: 400}} />
+
+3. **Unduh Apple Developer App**   
+   Buka App Store dan install aplikasi **Apple Developer**.
+
+4. **Buka Menu Account di Aplikasi**   
+   Masuk ke aplikasi, lalu buka tab **Account** dan klik tombol **Enroll Now** di bagian bawah.
+   > ⚠️ Jika tombol tidak aktif, hubungi Apple Support karena akun Anda belum memenuhi syarat.
+   <img src={Enrollment3} alt="Enroll Now" style={{width: 400}} />
+
+5. **Baca Informasi Program**   
+   Aplikasi akan menampilkan informasi manfaat menjadi Apple Developer.
+   <img src={Enrollment4} alt="Developer Benefits" style={{width: 400}} />
+
+6. **Isi Informasi Pribadi**   
+   Masukkan data pribadi dan alamat sesuai dengan identitas resmi.
+
+7. **Pilih Tipe Akun**
+   Pilih jenis akun sesuai kebutuhan Anda:
+
+   - **Individual:** Untuk perorangan atau freelancer.
+   - **Organization:** Untuk perusahaan atau startup berbadan hukum.
+   - **Nonprofit:** Untuk lembaga nirlaba resmi.
+   - **Educational Institution:** Untuk institusi pendidikan resmi.
+   - **Government:** Untuk lembaga pemerintah.   
+   <img src={Enrollment5} alt="Choose Account Type" style={{width: 400}} />
+
+8. **(Jika memilih Organization) Isi Detail Perusahaan**   
+   Masukkan **nama resmi perusahaan** dan **DUNS Number**.
+   <img src={Enrollment6} alt="Organization Info" style={{width: 400}} />
+
+9. **Isi Informasi Tambahan**   
+   Lengkapi data seperti:
+   - Email kerja dan website (domain sama).
+   - Nama penanggung jawab perusahaan (Sign In Authority).
+   > 🎯 Proses ini lebih mudah karena tidak memerlukan OTP seperti versi web.
+   <img src={Enrollment7} alt="Additional Info" style={{width: 330}} />
+   <img src={Enrollment8} alt="Additional Info" style={{width: 400}} />
+
+10. **Proses Review**   
+   Setelah submit, Anda akan menerima nomor enrollment dan status berubah menjadi **In Review**.
+   <img src={Enrollment9} alt="Enrollment In Review" style={{width: 400}} />
+   <img src={Enrollment10} alt="Enrollment Email" style={{width: 215}} />
+
+11. **Cek Email Anda**   
+   Apple akan mengirimkan notifikasi persetujuan. Jangan klik link di email tersebut jika Anda ingin menyelesaikan pembayaran lewat aplikasi.
+   <img src={Enrollment11} alt="Email Notification" style={{width: 400}} />
+
+12. **Lanjutkan Enrollment di Aplikasi**   
+   Kembali ke aplikasi, klik **Continue Enrollment** di menu Account.
+   <img src={Enrollment12} alt="Continue Enrollment" style={{width: 400}} />
+
+13. **Konfirmasi Ringkasan Data**   
+   Aplikasi akan menampilkan ringkasan data dan harga tahunan. Konfirmasi sebelum melanjutkan.
+   <img src={Enrollment13} alt="Enrollment Summary" style={{width: 400}} />
+
+14. **Lakukan Pembayaran**   
+   Ikuti proses pembayaran hingga selesai. Setelah itu akan muncul pop-up “You're all set! Your purchase was successful”.
+   <img src={EnrollmentSuccess} alt="Enrollment Success" style={{width: 260}} />
+   <img src={EnrollmentSuccess2} alt="Enrollment Success" style={{width: 300}} />
+
+15. **Status Akun**   
+   Setelah pembayaran berhasil, status akun akan berubah menjadi aktif secara instan, tanpa perlu menunggu konfirmasi tambahan dari Apple.
+
+16. **Informasi Membership**   
+   Anda bisa melihat informasi membership pada menu Account di aplikasi, jika sudah menunjukkan nama akun maka status sudah aktif. Dan Anda bisa melihat lebih detail tentang Team ID, Renewal Date, dan lain-lain pada [Apple Developer Account](https://developer.apple.com/account/).
+   <img src={Enrollment14} alt="Account Info" style={{width: 400}} />
+   <img src={Enrollment15} alt="Account Info" style={{width: 285}} />
+
+---
+
+## Permasalahan Umum
+
+1. **Already Subscribed**   
+   Jika Anda ingin mendaftar kembali untuk perusahaan lain yang berbeda, pastikan Anda sudah keluar dari akun Apple Developer yang lama. Jika tidak, Anda akan mendapatkan pesan "Already Subscribed" saat mencoba mendaftar. Karena dianggap akun Anda sudah berlangganan program developer.
+   <img src={EnrollmentError} alt="Already Subscribed" style={{width: 300}} />
+
+2. **Your Purchase Could not be Completed**
+   Jika Anda mendapatkan pesan "Your Purchase Could not be Completed", coba periksa kembali informasi pembayaran Anda. Pastikan kartu kredit yang digunakan valid dan memiliki saldo yang cukup.
+   <img src={EnrollmentError2} alt="Purchase Error" style={{width: 300}} />   
+
+---
+
+Dengan mengikuti langkah-langkah di atas, Anda akan mendapatkan pengalaman pendaftaran Apple Developer yang lebih mudah, cepat, dan minim kendala. Pastikan Anda mengikuti seluruh proses dengan teliti terutama jika mendaftarkan akun untuk entitas perusahaan.

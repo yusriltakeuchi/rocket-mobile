@@ -27,3 +27,11 @@
   --ifm-color-primary-lightest: #f87b9c;
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
 }
+
+
+img.img-sm {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+}
