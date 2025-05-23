@@ -7,6 +7,7 @@ sidebar_position: 5
 ## 2025-05-23
 
 - Memperbarui appstore/enrollment-v2.mdx
+- Menambahkan appstore/transfer-app.mdx
 
 ## 2025-05-22
 

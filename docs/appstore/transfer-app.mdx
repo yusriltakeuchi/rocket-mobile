@@ -1,0 +1,134 @@
+---
+sidebar_position: 13
+---
+
+import TransferApp from '/img/transfer-app.png';
+import TransferApp2 from '/img/transfer-app2.png';
+import TransferApp3 from '/img/transfer-app3.png';
+import TransferApp4 from '/img/transfer-app4.png';
+import TransferApp5 from '/img/transfer-app5.png';
+
+# Transfer App
+
+Panduan lengkap untuk melakukan transfer aplikasi dari satu akun Apple Developer ke akun lainnya. Proses ini penting untuk memastikan perpindahan kepemilikan dan pengelolaan aplikasi secara resmi serta lancar, terutama dalam konteks bisnis, akuisisi, atau perubahan struktur organisasi.
+
+## Persyaratan Transfer
+
+Berikut adalah syarat-syarat yang harus dipenuhi sebelum Anda dapat melakukan transfer aplikasi:
+
+1. **Akun Apple Developer:**  
+   Pastikan Anda memiliki akun Apple Developer yang aktif, terverifikasi, dan merupakan pemilik resmi dari aplikasi yang akan ditransfer.
+
+2. **Aplikasi yang Dapat Ditransfer:**  
+   Tidak semua aplikasi bisa ditransfer. Pastikan aplikasi Anda tidak memiliki permasalahan hukum, pelanggaran kebijakan, atau status yang tidak valid di App Store Connect.
+
+3. **Informasi Kontak:**  
+   Perbarui informasi kontak Anda di akun Apple Developer. Informasi ini penting agar Apple dapat menghubungi Anda selama proses transfer berlangsung.
+
+4. **Punya Akses ke Akun Tujuan:**  
+   Anda harus memiliki akses ke akun Apple Developer penerima. Diperlukan Apple ID dan Team ID dari akun tersebut untuk melanjutkan proses transfer.
+
+5. **Aplikasi Harus Aktif:**  
+   Hanya aplikasi dengan status *Ready for Sale* atau *Active* yang bisa ditransfer. Aplikasi dalam proses review, penolakan, atau ditarik dari App Store tidak memenuhi syarat.
+
+6. **Akses Two-Factor Authentication:**  
+   Anda harus memiliki perangkat Apple yang terhubung ke akun asal karena proses transfer membutuhkan kode verifikasi melalui autentikasi dua faktor (2FA).
+
+## Kriteria Aplikasi yang Dapat Ditransfer
+
+Pastikan aplikasi Anda memenuhi semua kriteria teknis dan administratif berikut ini sebelum melanjutkan transfer:
+
+✅ **Perjanjian Utama**  
+Anda harus telah menyetujui versi terbaru dari perjanjian lisensi Apple Developer.
+
+✅ **Versi Aplikasi yang Disetujui dan Dapat Didistribusikan**  
+Minimal satu versi aplikasi Anda harus memiliki status *Approved* dan *Ready for Sale*.
+
+✅ **Pembaruan Info Pengembang**  
+Pastikan semua informasi akun pengembang telah diperbarui dan tidak ada notifikasi penting yang tertunda.
+
+✅ **Status Pengajuan**  
+Status aplikasi harus salah satu dari berikut ini:
+- Created  
+- Developer Recalled  
+- Review Complete
+
+✅ **Status Pembelian Dalam Aplikasi (In-App Purchase)**  
+Semua pembelian dalam aplikasi harus berada dalam status berikut:
+- Ready to Submit  
+- Rejected  
+- Developer Removed from Sale  
+- Approved
+
+✅ **Langganan**  
+Jika aplikasi memiliki langganan (*subscription*), Anda harus membuat *app-specific shared secret* dan membagikannya kepada akun penerima.
+
+✅ **Mac Catalyst**  
+Jika aplikasi Anda menggunakan Mac Catalyst, pastikan telah diverifikasi dengan benar.
+
+✅ **Sign in with Apple**  
+Jika aplikasi menggunakan fitur ini, Apple mungkin meminta tambahan informasi atau dokumentasi.
+
+✅ **Uji Beta dengan TestFlight**  
+Hapus semua build dan penguji dari TestFlight, serta kosongkan kolom *Test Information* sebelum transfer dilakukan.
+
+✅ **Penawaran Pass di Wallet**  
+Jika aplikasi menyediakan pass untuk Apple Wallet, pass tersebut harus diterbitkan ulang oleh akun penerima setelah transfer.
+
+✅ **Xcode Cloud**  
+Hapus semua konfigurasi dan data yang berhubungan dengan Xcode Cloud di aplikasi Anda.
+
+✅ **Menggunakan iCloud**  
+Setelah transfer, data berikut akan berpindah ke akun penerima:
+- Data pengguna di iCloud  
+- Kontainer iCloud  
+- Identitas KVS yang terkait dengan aplikasi
+
+⚠️ **Catatan Penting:**  
+Jika aplikasi Anda berbagi kontainer iCloud dengan aplikasi lain dalam akun yang sama, transfer salah satu aplikasi akan memutus akses dari aplikasi lain ke kontainer tersebut. Data juga tidak lagi dapat diakses melalui dasbor iCloud oleh akun pengirim.
+
+## Proses Transfer Aplikasi
+
+Ikuti langkah-langkah berikut untuk mentransfer aplikasi melalui App Store Connect:
+
+1. **Masuk ke Akun Apple Developer:**  
+   Login ke App Store Connect menggunakan akun yang memiliki aplikasi yang akan ditransfer. Pilih aplikasi yang ingin dipindahkan.
+
+2. **Klik Transfer App**  
+   Buka tab **App Information**, lalu scroll ke bawah dan klik **Transfer App**.  
+   <img src={TransferApp} alt="App Information" style={{width: 400}} />
+
+3. **Verifikasi Persyaratan:**  
+   App Store Connect akan menampilkan daftar kriteria. Semua harus ditandai dengan tanda centang hijau untuk melanjutkan proses transfer.
+
+4. **Masukkan Informasi Akun Tujuan:**  
+   Isi **Apple ID** dan **Team ID** dari akun penerima. Pastikan informasi ini benar dan akun tujuan siap menerima aplikasi.
+
+5. **Tinjau Informasi Aplikasi:**  
+   Sistem akan menampilkan ringkasan aplikasi yang akan ditransfer. Tinjau dengan teliti, lalu lanjutkan.  
+   <img src={TransferApp2} alt="App Information" style={{width: 400}} />
+
+6. **Setujui Transfer di Akun Tujuan:**  
+   Masuk ke akun penerima dan buka App Store Connect. Di sana akan muncul alert permintaan transfer aplikasi.
+
+7. **Review Transfer Alert:**  
+   Scroll ke bagian bawah halaman alert. Di sana terdapat informasi aplikasi pada bagian **App Transfer**, klik tombol **Review**.  
+   <img src={TransferApp3} alt="Review Alert" style={{width: 700}} />
+
+8. **Lengkapi Metadata Aplikasi:**  
+   Isi informasi tambahan berikut:
+   - Company Name  
+   - Support URL  
+   - Privacy Policy URL  
+   - Contact Information  
+   - dan lainnya  
+   <img src={TransferApp4} alt="Form Transfer" style={{width: 700}} />
+
+9. **Setujui Transfer:**  
+   Setelah semua informasi dilengkapi, klik **Approve** untuk menyelesaikan proses transfer.
+
+10. **Selesai dan Aplikasi Aktif:**  
+    Setelah transfer disetujui, status aplikasi akan berubah menjadi **Active** di akun penerima.  
+    <img src={TransferApp5} alt="App Approve" style={{width: 700}} />
+
+🎉 **Selamat!** Proses transfer aplikasi telah berhasil diselesaikan.
