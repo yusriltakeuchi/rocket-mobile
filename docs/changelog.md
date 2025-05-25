@@ -4,6 +4,11 @@ sidebar_position: 5
 
 # Changelog
 
+## 2025-05-25
+
+- Memperbarui appstore/enrollment.mdx
+- Memperbarui appstore/enrollment-v2.mdx
+
 ## 2025-05-23
 
 - Memperbarui appstore/enrollment-v2.mdx
