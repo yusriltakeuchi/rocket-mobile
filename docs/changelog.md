@@ -4,6 +4,10 @@ sidebar_position: 5
 
 # Changelog
 
+## 2025-05-27
+
+- Memperbarui playstore/webview-app.md
+
 ## 2025-05-26
 
 - Memperbarui appstore/enrollment-v2.mdx

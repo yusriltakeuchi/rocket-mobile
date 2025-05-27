@@ -90,6 +90,56 @@ Ambil data dari API dan tampilkan dalam layout native. Gunakan `ListView`, `Recy
 
 ---
 
+## Pengalaman Penulis
+
+Penulis memiliki pengalaman dalam mengembangkan aplikasi **WebView** yang berhasil lolos dari proses **review Google Play Store**. Proyek ini berkaitan dengan sebuah platform edukasi yang awalnya hanya tersedia dalam versi web. Karena tampilannya sudah responsif untuk mobile dan keterbatasan waktu serta anggaran dari pihak klien, penulis diminta untuk mengembangkan versi mobile dengan pendekatan WebView.  
+
+Berikut adalah pendekatan dan solusi yang diterapkan:
+
+### 1. Halaman Native yang Dibuat
+Penulis mengembangkan beberapa halaman secara native untuk meningkatkan pengalaman pengguna, antara lain:
+
+- **Splash Screen**
+- **Onboarding**
+- **Login**
+- **Register**
+- **Notifikasi**
+- **Main Screen (berisi Bottom Navigation dan AppBar)**
+
+### 2. Integrasi Data
+- Halaman-halaman native memperoleh data dari backend melalui **API**.
+
+### 3. Push Notification
+- Penulis menambahkan **Push Notification** menggunakan **Firebase Cloud Messaging (FCM)**.
+
+### 4. Navigasi dan Struktur Aplikasi
+- Di halaman **Main Screen**, penulis membuat **Bottom Navigation Bar** secara native. 
+- Ketika tab diklik, aplikasi tidak berpindah ke halaman native lain, melainkan **mengakses URL berbeda di dalam WebView**.
+- Penulis juga menambahkan **AppBar** dengan:
+  - Logo di sebelah kiri
+  - Dua **Action Button** di sebelah kanan (Profile dan Notifikasi)
+- Pada saat tombol back fisik device ditekan, dia akan kembali ke halaman Webview sebelumnya, tapi jika menekan tombol back 2x secara cepat baru nanti akan keluar dari aplikasi.
+
+### 5. Integrasi dengan Tim Web
+Penulis berkolaborasi dengan tim pengembang web untuk menyepakati skema parameter sebagai penghubung antara mobile dan web. Detailnya:
+
+- Mobile mengirimkan parameter `isMobile` dan `token` di setiap permintaan URL di WebView.
+- Tim web membuat pengecekan kondisi untuk parameter tersebut, sehingga:
+  - Komponen seperti **Bottom Navbar**, **AppBar**, **Drawer**, dll. akan disembunyikan dari tampilan web
+  - Komponen yang tersembunyi digantikan oleh komponen native yang dibuat di aplikasi
+
+### 6. Tantangan Teknis
+Beberapa tantangan teknis yang dihadapi:
+
+- **Fitur Upload Foto di halaman Profil**
+- **Fitur Print Dokumen yang tidak berjalan di WebView**
+
+Solusi yang dilakukan:
+
+- Membuat **bridge** dengan cara **inject JavaScript** agar proses tersebut dapat dilakukan secara native di luar WebView.
+
+---
+
 ## Penutup
 
 WebView App bisa menjadi solusi cepat untuk membuat aplikasi Android dari situs web, **asalkan dikembangkan dengan pendekatan yang benar dan mengikuti pedoman Google**. Fokuslah untuk membangun pengalaman pengguna yang baik, memberikan nilai tambah dibanding hanya membuka website, dan pastikan aplikasi Anda benar-benar berguna bagi pengguna.
