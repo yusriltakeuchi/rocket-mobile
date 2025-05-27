@@ -66,7 +66,7 @@ const config: Config = {
           label: 'Dokumentasi',
         },
         {
-          href: 'https://saweria.co/yurapsanjani',
+          href: '/docs/donation',
           position: 'left',
           label: 'Donasi',
         },
