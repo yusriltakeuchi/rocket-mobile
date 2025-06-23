@@ -2,6 +2,12 @@
   "redirects": [
     {
       "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "rocket-mobile.vercel.app"
+        }
+      ],
       "destination": "https://rocketmob.yurapsanjani.com/$1",
       "permanent": true
     }
