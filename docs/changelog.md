@@ -4,6 +4,10 @@ sidebar_position: 5
 
 # Changelog
 
+## 2025-06-23
+
+- Memperbarui domain menjadi rocketmob.yurapsanjani.com
+
 ## 2025-05-27
 
 - Memperbarui playstore/webview-app.md
